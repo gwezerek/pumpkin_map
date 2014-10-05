@@ -1,0 +1,137 @@
+// =============================================
+
+//  Base SCSS
+
+// =============================================
+
+
+//  Imports
+// =============================================
+@import 'compass/css3';
+@import 'compass/utilities/general/clearfix';
+@import 'partials/mixins';
+@import 'partials/variables';
+
+
+//  Modules
+// =============================================
+@import 'partials/base';
+
+
+
+
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+// FastCo Workarounds
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+// Having trouble with FC styles and don't want to fix the problem?
+// Monkeypatch here!
+
+.prose.body {
+    // General FC resets
+    * {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+    img {
+        max-width: none;
+    }
+    form {
+        margin: 0 0 -15px 0;
+    }
+    table {
+        margin: 0;
+        border: none;
+    }
+    table thead,
+    table tfoot {
+        background: none;
+    }
+    p,
+    p:first-child,
+    p:first-line {
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit;
+        color: inherit;
+    }
+    label {
+        margin: 0;
+    }
+    ol {
+        line-height: 100%;
+        list-style-type: none;
+        & li {
+            width: auto;
+        }
+    }
+    ul {
+        margin: 0;
+        & li {
+            line-height: 100%;
+            padding-left: 0;
+        }
+    }
+    ol > li:before {
+        position: static;
+    }
+    ul > li:before {
+        content: none;
+    }
+    // Base overwrites
+    .viz-hed {
+        font-size: 22px;
+        font-weight: 600 !important;
+        line-height: 130%;
+        margin-bottom: 12px !important;
+        letter-spacing: 0;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .viz-subhead {
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        line-height: 110%;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+    .viz-copy,
+    .viz-copy:first-line,
+    .viz-copy:first-child {
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        line-height: 140% !important;
+        color: $dark-gray !important;
+    }
+    .viz-smallcaps {
+        font-family: $slab !important;
+        font-size: 12px !important;
+        line-height: 120%;
+    }
+    .viz-detail {
+        text-transform: none;
+        color: $med-gray !important;
+    }
+    .viz-source,
+    .viz-source:first-line,
+    .viz-source:first-child {
+        font-family: $slab !important;
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        line-height: 140% !important;
+        margin: 0 0 7px;
+        color: $med-gray !important;
+    }
+    .viz-footer-copy {
+        font-size: 10px !important;
+        line-height: 140% !important;
+        margin: 0 !important;
+        color: $med-gray !important;
+    }
+    // Graphic specific
+
+}

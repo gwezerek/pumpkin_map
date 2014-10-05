@@ -1,0 +1,18 @@
+<article class="viz-article">
+
+    <!-- HTML GOES HERE -->
+
+    <script type="text/javascript">
+    window.FC = window.FC || {};
+    window.FC.inlineFunctions = window.FC.inlineFunctions || {};
+
+    window.FC.inlineFunctions.graphicScript = function() {
+        // JS GOES HERE
+    };
+
+    require('/js/vendor/d3.min.js', function(d3) {
+        window.d3 = d3;
+        window.FC.inlineFunctions.graphicScript();
+    });
+    </script>
+</article>
