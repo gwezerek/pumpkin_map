@@ -13,12 +13,10 @@
 // SETUP VARIABLES
 // =============================================
 
+L.mapbox.accessToken = 'pk.eyJ1IjoiZ3dlemVyZWsiLCJhIjoicXJkMjV6WSJ9.Iw_1c5zREHqNSfdtkjlqbA';
 
-
-// D3
-// =============================================
-
-
+// Init the map
+var map = L.mapbox.map('map', 'examples.map-i86nkdio').setView([37.8, -96], 4);
 
 // HANDLERS
 // =============================================
@@ -33,11 +31,11 @@
 // SVG HELPERS
 // =============================================
 
-d3.selection.prototype.moveToFront = function() {
-    return this.each(function() {
-        this.parentNode.appendChild(this);
-    });
-};
+// d3.selection.prototype.moveToFront = function() {
+//     return this.each(function() {
+//         this.parentNode.appendChild(this);
+//     });
+// };
 
 SVGElement.prototype.hasClass = function(className) {
     return new RegExp('(\\s|^)' + className + '(\\s|$)').test(this.getAttribute("class"));

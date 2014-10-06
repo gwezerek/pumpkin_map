@@ -9,15 +9,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width">
-	<title>TITLE TK</title>
+	<meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+	<title>Pumpkin Beer Map</title>
+
 	<link rel="stylesheet" href="css/site.css">
-	<script src="http://d3js.org/d3.v3.min.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
+
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-	<script src="http://d3js.org/queue.v1.min.js"></script>
-	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+	<!-- <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> -->
+	<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+	<!-- <script src="http://d3js.org/queue.v1.min.js"></script> -->
+	<!-- <script src="http://d3js.org/topojson.v1.min.js"></script> -->
+
 </head>
 
 <body>
@@ -28,7 +36,9 @@
 					<h4 class="viz-hed">Hed Goeshere</h4>
           <p class="viz-copy viz-intro">Intro copy here.</p>
 				</header>
-				<div class="viz-svg-wrap">
+				<div class="viz-map-wrapper">
+					<div id="map" class="viz-map">
+					</div>
 				</div>
 				<p class="viz-copy">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 			</section>
